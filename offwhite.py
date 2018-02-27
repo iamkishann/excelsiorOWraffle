@@ -1,7 +1,7 @@
 
 import requests, random, time, json
 from time import sleep
-from faker import Faker
+#from faker import Faker
 from random import getrandbits
 
 
@@ -11,7 +11,7 @@ print ("################################################")
 
 def main():
 
-    faker = Faker()
+    #faker = Faker()
     s = requests.Session()
     s.headers = {
             'Origin':'https://www.excelsiormilano.com',
@@ -24,6 +24,9 @@ def main():
 
 
 ########edit  this###########
+
+    fname = "yourfirstname"
+    lname = "yourlastname"
     bdate = "1998-09-11"
     phone = "7022798025"
     size = ['8','8,5','9','9,5','10','10,5','11','11,5','12','12,5','13']
@@ -33,12 +36,9 @@ def main():
     zipcode = "90701"
     street = "12345 bob ave"
 
-    #if your email 1234lab@gmail.com replase xxx with 1234lab
+    #if your email is 1234lab@gmail.com replase xxx with 1234lab
     email = "xxx+{}@gmail.com".format(getrandbits(40)) 
 #####################
-
-    fname = faker.first_name()
-    lname = faker.last_name()
 
     data = {
         'first_name':fname,
