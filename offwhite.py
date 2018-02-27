@@ -54,7 +54,6 @@ def main():
         'street':street
     }
     re = s.post(url, data=data)
-    print (re.text)
     
     if re.status_code == 200:
         print("Entry Successful with ", email, "success")
